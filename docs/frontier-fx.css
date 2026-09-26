@@ -1,0 +1,52 @@
+/* A separate empty layer behind the premiere. Parent sets its size/z-index. */
+.frontier-fx {
+  --frontier-primary: 36, 163, 225;
+  --frontier-secondary: 173, 125, 64;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  contain: layout paint;
+  background:
+    radial-gradient(ellipse at 81% 45%, rgba(var(--frontier-primary), .13), transparent 42%),
+    radial-gradient(ellipse at 10% 91%, rgba(var(--frontier-secondary), .10), transparent 53%),
+    linear-gradient(168deg, #050a11 20%, #0c1824 49%, #07101a 55%, #03080e 85%);
+}
+.frontier-fx::before {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 32%;
+  right: -10%;
+  top: 39%;
+  border: 1px solid rgba(var(--frontier-primary), .22);
+  border-radius: 50%;
+  transform: rotate(-19deg);
+  box-shadow: 0 0 27px rgba(var(--frontier-primary), .035), inset 0 0 24px rgba(var(--frontier-primary), .025);
+}
+.frontier-fx::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 14% 28%, #c6dfe8 0 .7px, transparent 1.5px),
+    radial-gradient(circle at 78% 18%, #c6dfe888 0 .6px, transparent 1.4px),
+    radial-gradient(circle at 38% 74%, #c6dfe866 0 .6px, transparent 1.2px),
+    radial-gradient(circle at 87% 69%, #c6dfe899 0 .8px, transparent 1.5px);
+  background-size: 307px 227px, 411px 283px, 251px 313px, 463px 347px;
+  opacity: .55;
+}
+.frontier-fx__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+.frontier-fx--ready .frontier-fx__canvas { opacity: 1; }
+.frontier-fx--ready::before,
+.frontier-fx--ready::after { opacity: 0; }
+.frontier-fx--fallback .frontier-fx__canvas { visibility: hidden; }
+/* No CSS animation: static/reduced-motion/fallback states spend no frame loop. */
