@@ -1,12 +1,12 @@
 # NULLFRONT: Frontier Wars
 
-An original, native science-fiction real-time strategy game built in Unreal Engine 5.8. Command one of three factions, expand your economy, and destroy every enemy structure to win.
+An original, native science-fiction real-time strategy game built in Unreal Engine 5.8. Play **The Quiet Meridian** story campaign, or command one of three factions in a skirmish. This manual covers version **0.5.0**.
 
 ## Deploy
 
 Download the Mac release, extract the ZIP, and move **NULLFRONT.app** into Applications. Open the app to begin.
 
-Choose your faction, an enemy faction or **Random**, and **Easy**, **Normal**, **Hard**, or **Brutal** difficulty. Choose a battlefield, then select **Launch Skirmish**.
+Press **F6** or choose **Story Campaign** for the campaign. For a skirmish, choose your faction, an enemy faction or **Random**, and **Easy**, **Normal**, **Hard**, or **Brutal** difficulty. Choose a battlefield, then select **Launch Skirmish** or press **Enter**. Skirmish victory requires destroying every enemy structure.
 
 - **Ashfall Mesa:** dusk highlands, a central mesa, and open flanks.
 - **Frostglass Rift:** frozen plateaus, a central chasm, a narrow ice bridge, and flank passes.
@@ -14,6 +14,27 @@ Choose your faction, an enemy faction or **Random**, and **Easy**, **Normal**, *
 **Rapid Deployment** is on by default. You begin with 12 workers, a starter base, a mixed strike force, 250 Crystal, and 75 Flux. Toggle it to **Classic Build-up** for the original opening: a headquarters, 10 workers, and 50 Crystal, with no relay objective.
 
 Select **Watch Battle** (or press **F9** at the title screen) for an immediate combined-arms clash using your chosen factions and battlefield. It starts in cinematic view and continues as a real AI skirmish. **Field Manual** opens the controls. **Graphics** cycles Epic → High → Medium → Low and saves your choice; it is also available in the pause menu.
+
+The opening cinematic introduces the silent colony and the Meridian. Press any key to skip it. Choose **Watch Intro** or press **F7** at the title screen to replay it.
+
+## The Quiet Meridian
+
+A colony has been silent for eleven days. When its relay transmits a child's voice, Commander Ada Voss disobeys her demolition orders and leads a recovery team into Ashfall. Engineer Ilya Senn helps reconstruct the signal; the search draws them into a war beneath Frostglass.
+
+The campaign follows **the Concord** through four authored missions. Each starts with a prepared base, workers, an army, Voss, and **700 Crystal / 350 Flux**. The skirmish faction, difficulty, and deployment choices do not change campaign missions. You can build your economy, train reinforcements, and use the regular command controls.
+
+At the chapter selector, use **↑ / ↓** or click an unlocked chapter. **Enter** opens its briefing; **Enter** again deploys. Briefings pause the mission. During play, read the **Primary Objective** panel and use **Locate** to center the camera on its current target. In chapter three, resonators also have battlefield markers.
+
+| Chapter | Mission | How to complete it |
+|---|---|---|
+| **01 · The Last Transmission** | Recover the signal on Ashfall Mesa. | Capture the central relay and hold it uncontested for **45 consecutive game seconds**. An enemy contest or takeover resets the hold timer. |
+| **02 · A Bridge of Glass** | Protect the Frostglass evacuation. | Defend your landing headquarters and Voss for **180 game seconds** while enemy waves approach. |
+| **03 · The Enemy's Voice** | Silence the signal's defenses on Ashfall Mesa. | Destroy **all three marked resonators**, then control the central relay without an enemy contest. |
+| **04 · Dawn Beyond the Front** | Shut down the Meridian on Frostglass Rift. | Accumulate **75 game seconds** of uncontested relay control, then destroy the exposed **Heart**. Fighting pauses uplink progress; uncontested enemy ownership drains it at half speed. The Heart cannot be damaged until the uplink finishes. |
+
+**Voss and your headquarters must survive every chapter.** Keep reinforcements flowing and pull Voss back from concentrated fire. A mission ends in failure if either is destroyed. Victory follows the listed objective; clearing every enemy building is unnecessary in the campaign.
+
+After a victory, **Enter** continues to the next chapter. After a defeat, **Enter** retries the current mission. Completing a chapter unlocks the next and saves that unlock automatically; completed chapters remain available for replay. Only chapter unlocks are saved—leaving during a mission means starting that chapter again.
 
 ## Your first offensive
 
@@ -56,13 +77,19 @@ Each faction has its own workers, combat units, hero, production structures, def
 | Minimap left click / right click | Move the camera / issue a command |
 | Alt | Show all health bars |
 | + / − | Increase / decrease game speed |
+| F6 at the title screen | Open the campaign chapter selector |
+| F7 at the title screen | Replay the opening cinematic |
+| ↑ / ↓ in the chapter selector | Choose an unlocked chapter |
+| Enter in campaign menus | Begin chapter, deploy, continue, or retry |
 | F8 | Toggle cinematic view |
 | F9 at the title screen | Launch a cinematic battle |
 | Esc | Cancel the current targeting/build action, or open the pause menu |
 | F10 | Open the pause menu |
 
-**Cinematic view:** F8 eases into a lower angle, a focused lens, and focused depth of field while slowly orbiting your current view. It hides the command interface, cursor, selection rings, and tactical relay markers. In observed AI matches, the camera follows active battles; manual panning suspends this for six seconds. Arrows pan and the wheel zooms. The battle continues; press F8 again to return to command.
+**Cinematic view:** F8 eases into a lower angle with depth of field while slowly orbiting your current view. It hides the command interface, cursor, selection rings, and tactical relay markers. In observed AI matches, the camera follows active battles and moves in for close views of units; manual panning suspends this for six seconds. Arrows pan and the wheel zooms. The battle continues; press F8 again to return to command.
 
 The stereo soundtrack crossfades between **Frontier** and **Onslaught** as nearby fighting intensifies. Weapon sounds follow their position on screen, including while the camera turns; distant sounds soften.
 
 The pause menu offers **Resume**, **Controls**, **Surrender**, **Graphics**, and **Quit to Title**.
+
+Campaign paintings and character concepts include AI-generated artwork. New character and heavy-unit assets use Nano Banana Pro concepts and Meshy models, rigs, and animations generated through Fal. The opening cinematic uses MiniMax H3 Max via Fal.ai; its imagery is cinematic, not gameplay footage. Music and combat effects use ElevenLabs models through Fal. See the [project credits](README.md#credits) for further details.
