@@ -1,122 +1,64 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080f19">
-  <meta name="description" content="NULLFRONT: Frontier Wars is an original sci-fi real-time strategy game for Apple Silicon Macs. Three factions, two battlefields, and single-player skirmishes against AI.">
-  <meta property="og:title" content="NULLFRONT: Frontier Wars">
-  <meta property="og:description" content="Build your base. Command your army. Own the frontier. An original native macOS RTS.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://slimetoad.github.io/nullfront/assets/NULLFRONT-cinematic.jpg">
-  <title>NULLFRONT: Frontier Wars — Download for Mac</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="assets/emblem.svg" type="image/svg+xml">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070b12">
+<meta name="description" content="Three factions. Two hostile worlds. Your war. NULLFRONT: Frontier Wars is a free native sci-fi strategy game for Apple Silicon Macs.">
+<meta property="og:title" content="NULLFRONT — The frontier is yours."><meta property="og:description" content="Build an empire. Command a faction. Conquer the frontier. Download the free Mac preview."><meta property="og:type" content="website"><meta property="og:url" content="https://slimetoad.github.io/nullfront/"><meta property="og:image" content="https://slimetoad.github.io/nullfront/assets/hero-frontier.png">
+<title>NULLFRONT: Frontier Wars — Command the frontier</title>
+<link rel="icon" href="assets/emblem.svg" type="image/svg+xml"><link rel="preload" as="image" href="assets/hero-frontier.png"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="brand" href="#" aria-label="NULLFRONT home">
-      <svg class="emblem" viewBox="0 0 40 44" fill="none" aria-hidden="true"><path d="M20 2 38 12v20L20 42 2 32V12L20 2Z" stroke="currentColor"/><path d="M12 30V14l16 16V14M8 10l12-7 12 7M8 34l12 7 12-7" stroke="currentColor" stroke-width="2"/></svg>
-      <span>NULLFRONT<small>FRONTIER WARS</small></span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="#factions">Factions</a>
-      <a href="#field-notes">The game</a>
-      <a class="nav-download" href="#download">Download <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> VERSION 0.3.0 <span class="separator">/</span> CINEMATIC UPDATE</p>
-        <h1 id="hero-title">OWN THE<br><em>frontier.</em></h1>
-        <p class="hero-intro">Three factions. Two hostile worlds.<br> One army under your command.</p>
-        <p class="hero-description">An original sci-fi real-time strategy game. Build a base, seize the relay, and lead your forces into single-player battles against AI.</p>
-        <div class="hero-actions">
-          <a class="button button-gold" href="https://github.com/Slimetoad/nullfront/releases/download/v0.3.0/NULLFRONT-0.3.0-macOS-arm64.zip">Download for Mac <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="#field-notes">Explore the game <span aria-hidden="true">↘</span></a>
-        </div>
-        <p class="platform-note">Apple Silicon · macOS 14+ · Native desktop game</p>
-        <p class="early-note">Early build. See <a href="#installation">installation notes</a> before opening.</p>
-      </div>
-
-      <figure class="hero-capture">
-        <div class="capture-heading"><span><i aria-hidden="true"></i> IN-GAME CAPTURE</span><span>CONCORD / F8 VIEW</span></div>
-        <a href="assets/NULLFRONT-cinematic.jpg" aria-label="View the full in-game screenshot">
-          <img src="assets/NULLFRONT-cinematic.jpg" width="2880" height="1856" fetchpriority="high" alt="A blue Concord headquarters and barracks on rocky terrain, with workers gathering cyan crystals in NULLFRONT's cinematic camera view.">
-        </a>
-        <figcaption><span>The battlefield, through a different lens.</span><a href="assets/NULLFRONT-cinematic.jpg">Full capture <span aria-hidden="true">↗</span></a></figcaption>
-        <div class="capture-corner" aria-hidden="true"></div>
-      </figure>
-    </section>
-
-    <div class="briefing-strip wrap" aria-label="Game at a glance">
-      <p><strong>03</strong><span>ORIGINAL FACTIONS</span></p>
-      <p><strong>02</strong><span>BATTLEFIELDS</span></p>
-      <p><strong>01</strong><span>COMMANDER. YOU.</span></p>
-      <p class="strip-mode">SINGLE PLAYER <span aria-hidden="true">/</span> AI SKIRMISH</p>
-    </div>
-
-    <section class="factions wrap section-space" id="factions" aria-labelledby="factions-title">
-      <div class="section-heading">
-        <div><p class="eyebrow">01 / CHOOSE YOUR DOCTRINE</p><h2 id="factions-title">Three ways to<br><em>take the field.</em></h2></div>
-        <p>Industry. Instinct. Light.<br>Every faction brings its own units, structures, hero, and way of waging war.</p>
-      </div>
-      <div class="faction-grid">
-        <article class="faction concord">
-          <div class="portrait"><img src="assets/Factions.png" width="2172" height="724" loading="lazy" alt="Illustrated portrait of the Concord's armored human commander."></div>
-          <div class="faction-copy"><p class="eyebrow">01 / ARMORED INDUSTRY</p><h3>The Concord</h3><p>Build a fortified frontline. Deploy siege armor and call down orbital fire.</p><span class="faction-detail">Steel. Discipline. Firepower.</span></div>
-        </article>
-        <article class="faction bloom">
-          <div class="portrait"><img src="assets/Factions.png" width="2172" height="724" loading="lazy" alt="Illustrated portrait of the Bloom's horned, organic swarm leader."></div>
-          <div class="faction-copy"><p class="eyebrow">02 / THE LIVING SWARM</p><h3>The Bloom</h3><p>Spread mycelium across the map. Regenerate, multiply, and overwhelm.</p><span class="faction-detail">Grow. Adapt. Consume.</span></div>
-        </article>
-        <article class="faction lumen">
-          <div class="portrait"><img src="assets/Factions.png" width="2172" height="724" loading="lazy" alt="Illustrated portrait of a Lumen warrior in pale gold armor with glowing blue eyes."></div>
-          <div class="faction-copy"><p class="eyebrow">03 / HARD-LIGHT ANCIENTS</p><h3>The Lumen</h3><p>Shape a luminous empire. Fight with regenerating shields and psionic abilities.</p><span class="faction-detail">Precision. Power. Light.</span></div>
-        </article>
-      </div>
-      <p class="art-caption">Illustrated faction portraits. The screenshot above shows actual gameplay.</p>
-    </section>
-
-    <section class="field-notes section-space" id="field-notes" aria-labelledby="game-title">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><p class="eyebrow">02 / THE ART OF COMMAND</p><h2 id="game-title">A base to build.<br><em>A battle to shape.</em></h2></div>
-          <p>Familiar RTS foundations, an original universe, and a faster route to your first offensive.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature"><span class="feature-number">01</span><div><h3>Deploy with a purpose</h3><p>Rapid Deployment starts you with workers, a ready base, and a mixed strike force. Choose Classic Build-up for a headquarters-and-workers opening.</p></div></article>
-          <article class="feature"><span class="feature-number">02</span><div><h3>Fight for the relay</h3><p>Hold the central relay with ground troops to earn bonus resources. Control the economy, reinforce your army, and destroy the enemy's structures to win.</p></div></article>
-          <article class="feature"><span class="feature-number">03</span><div><h3>Read the terrain</h3><p>Take the high ground on Ashfall Mesa or navigate frozen chasms and the ice bridge on Frostglass Rift. Choose your AI opponent and difficulty before deploying.</p></div></article>
-          <article class="feature"><span class="feature-number">04</span><div><h3>Let the camera breathe</h3><p>Press F8 for a cinematic lens and a clean view of the battlefield. Pan and zoom freely, or watch two AI armies fight while the camera follows the action.</p></div></article>
-        </div>
-        <div class="update-note"><span class="update-label">NEW IN 0.3.0</span><p>Textured rock, sculpted faction details, atmospheric lighting, and layered combat effects—from the first muzzle flash to the last ember.</p></div>
-      </div>
-    </section>
-
-    <section class="download wrap section-space" id="download" aria-labelledby="download-title">
-      <div class="download-copy">
-        <p class="eyebrow">03 / YOUR NEXT COMMAND</p>
-        <h2 id="download-title">The frontier<br><em>is waiting.</em></h2>
-        <p>Download NULLFRONT: Frontier Wars for Mac.</p>
-        <a class="button button-gold" href="https://github.com/Slimetoad/nullfront/releases/download/v0.3.0/NULLFRONT-0.3.0-macOS-arm64.zip">Download v0.3.0 <span aria-hidden="true">↓</span></a>
-        <p class="download-meta" id="download-size">407 MiB ZIP · ~748 MiB installed</p>
-        <a class="text-link" href="https://github.com/Slimetoad/nullfront/releases/latest">Release notes &amp; downloads <span aria-hidden="true">↗</span></a>
-        <details class="checksum"><summary>Verify the download · SHA-256</summary><code>f06a41d13976442a5e850b294d862d0f1ffa835c1b2926c097c06e85f0441853</code></details>
-      </div>
-      <div class="installation" id="installation">
-        <div class="requirements"><span>PLATFORM</span><strong>macOS 14.0+</strong><span>PROCESSOR</span><strong>Apple Silicon · arm64</strong><span>PLAY MODE</span><strong>Single-player vs AI</strong></div>
-        <p class="native-note">This is a native Mac application. It does not run in your browser.</p>
-        <h3>Install and deploy</h3>
-        <ol><li>Download and unzip the Mac release.</li><li>Move <strong>NULLFRONT.app</strong> to your Applications folder.</li><li>Open the app, choose a faction, and select <strong>Launch Skirmish</strong>.</li></ol>
-        <aside class="security-note" aria-label="Early build installation notice"><strong>A note about this early build</strong><p>The app is not Developer ID signed or notarized. macOS may block the first launch. If you choose to open it, follow <a href="https://support.apple.com/en-us/102445">Apple's official Open Anyway guidance</a> after attempting to open the app.</p></aside>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer wrap"><a class="footer-brand" href="#">NULLFRONT <span>FRONTIER WARS</span></a><p>An original sci-fi strategy game.</p><a href="https://github.com/Slimetoad/nullfront/releases">All releases <span aria-hidden="true">↗</span></a></footer>
-</body>
-</html>
+<body data-menu="closed">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<a class="brand" href="#hero" aria-label="NULLFRONT home"><img src="assets/emblem.svg" width="34" height="38" alt=""><span>NULLFRONT<small>FRONTIER WARS</small></span></a>
+<button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><span></span><span></span></button>
+<nav id="site-nav" aria-label="Main navigation"><a href="#factions">The factions</a><a href="#gameplay">The battlefield</a><a href="#war-room">How to play</a><a class="nav-cta" href="#download">Play free <span aria-hidden="true">↗</span></a></nav>
+</header>
+<main id="main">
+<section class="hero" id="hero" aria-labelledby="hero-title">
+<div class="hero-art" aria-hidden="true"></div><div class="hero-shade" aria-hidden="true"></div><canvas id="starfield" aria-hidden="true"></canvas>
+<div class="hero-content">
+<p class="eyebrow hero-eyebrow"><span class="live-dot" aria-hidden="true"></span> THE CINEMATIC UPDATE IS LIVE</p>
+<h1 id="hero-title">NULLFRONT</h1><p class="hero-subtitle"><span></span> FRONTIER WARS <span></span></p>
+<p class="hero-line">THE FRONTIER IS YOURS.</p>
+<p class="hero-description">Three factions. Two hostile worlds.<br>An army waiting for your command.</p>
+<div class="hero-actions"><a class="button button-gold" href="https://github.com/Slimetoad/nullfront/releases/download/v0.3.0/NULLFRONT-0.3.0-macOS-arm64.zip"><span>Download free</span><span aria-hidden="true">↓</span></a><a class="button button-outline" href="#gameplay"><span class="crosshair" aria-hidden="true">⌖</span> Explore the battlefield</a></div>
+<p class="platform-note">APPLE SILICON <span>•</span> macOS 14+ <span>•</span> FREE PUBLIC PREVIEW</p>
+</div>
+<div class="hero-bottom"><a class="scroll-cue" href="#factions"><span class="scroll-line" aria-hidden="true"></span> CHOOSE YOUR SIDE</a><div class="hero-tools"><span class="art-label">CINEMATIC KEY ART</span><button id="motion-toggle" aria-pressed="true" aria-label="Animate visual effects">Effects <span data-motion-label>ON</span><i aria-hidden="true"></i></button></div></div>
+</section>
+<div class="update-bar"><div class="wrap update-inner"><span class="update-badge">UPDATE 0.3.0</span><p>A new lens on the war.</p><span class="update-detail">Richer worlds. Layered effects. Cinematic command.</span><a href="https://github.com/Slimetoad/nullfront/releases/tag/v0.3.0">Explore the update <span aria-hidden="true">↗</span></a></div></div>
+<section class="factions section-space" id="factions" aria-labelledby="factions-title">
+<div class="wrap section-heading reveal"><p class="eyebrow">ALLEGIANCE IS EVERYTHING</p><h2 id="factions-title">THREE FACTIONS.<br><span>ONE FRONTIER.</span></h2><p>Steel, instinct, or light. Choose the power you command.</p></div>
+<div class="wrap faction-tabs" id="faction-tabs" role="tablist" aria-label="Choose a faction">
+<button role="tab" id="tab-concord" data-faction="concord" aria-selected="true" aria-controls="faction-panel"><span class="faction-sigil" aria-hidden="true">Ⅰ</span><span>THE CONCORD<small>ARMORED INDUSTRY</small></span></button>
+<button role="tab" id="tab-bloom" data-faction="bloom" aria-selected="false" aria-controls="faction-panel" tabindex="-1"><span class="faction-sigil" aria-hidden="true">Ⅱ</span><span>THE BLOOM<small>THE LIVING SWARM</small></span></button>
+<button role="tab" id="tab-lumen" data-faction="lumen" aria-selected="false" aria-controls="faction-panel" tabindex="-1"><span class="faction-sigil" aria-hidden="true">Ⅲ</span><span>THE LUMEN<small>HARD-LIGHT ANCIENTS</small></span></button>
+</div>
+<div class="faction-stage" id="faction-stage" data-faction="concord"><div class="wrap faction-panel" id="faction-panel" role="tabpanel" aria-labelledby="tab-concord" tabindex="0">
+<div class="faction-portrait" aria-hidden="true"><img src="assets/Factions.png" width="2172" height="724" loading="lazy" alt=""></div>
+<div class="faction-copy"><p class="eyebrow"><span data-faction-index>01</span> / FACTION DOSSIER</p><h3 data-faction-name>The Concord</h3><p class="faction-tagline" data-faction-tagline>Steel. Discipline. Firepower.</p><p class="faction-description" data-faction-description>Human orbital industry goes to war. Riggers weld your expanding base while siege armor holds the frontline. Deploy Hammers for long-range fire and call down devastating Orbital Lances.</p><div class="faction-traits" data-faction-traits><span>Siege armor</span><span>Orbital fire</span><span>On-site construction</span></div><div class="hero-dossier"><span>YOUR COMMANDER</span><strong data-faction-hero>Commander Ada Voss</strong></div><a class="text-link" href="#download">TAKE COMMAND <span aria-hidden="true">→</span></a></div>
+<span class="portrait-label">FACTION CONCEPT ART</span></div></div>
+<noscript><div class="wrap no-js-factions"><p><strong>The Bloom:</strong> spread mycelium, regenerate, and overwhelm with a living swarm.</p><p><strong>The Lumen:</strong> command hard-light constructs, regenerating shields, and psionic abilities.</p></div></noscript>
+</section>
+<section class="gameplay section-space" id="gameplay" aria-labelledby="gameplay-title"><div class="wrap">
+<div class="section-heading reveal"><p class="eyebrow">BOOTS ON ALIEN GROUND</p><h2 id="gameplay-title">THIS IS YOUR<br><span>BATTLEFIELD.</span></h2><p>Real captures. Original worlds. Every decision is yours.</p></div>
+<div class="gallery-grid">
+<a class="media-card media-main reveal" href="assets/NULLFRONT-cinematic.jpg" data-lightbox data-image="assets/NULLFRONT-cinematic.jpg" data-caption="Actual gameplay · Concord headquarters on Ashfall Mesa in F8 cinematic view."><img src="assets/NULLFRONT-cinematic.jpg" width="2880" height="1856" loading="lazy" alt="Concord headquarters and troops on the rocky Ashfall Mesa battlefield."><span class="media-top">IN-GAME CAPTURE <span aria-hidden="true">↗</span></span><div class="media-title"><small>ASHFALL MESA / THE CONCORD</small><h3>Build your war machine.</h3><span>VIEW CAPTURE <span aria-hidden="true">+</span></span></div></a>
+<a class="media-card reveal" href="assets/gameplay-frostglass.jpg" data-lightbox data-image="assets/gameplay-frostglass.jpg" data-caption="Actual gameplay · Lumen structures and resource crystals on Frostglass Rift."><img src="assets/gameplay-frostglass.jpg" width="2880" height="1856" loading="lazy" alt="Golden Lumen structures and blue crystals on the snowy Frostglass Rift."><span class="media-top">IN-GAME CAPTURE <span aria-hidden="true">↗</span></span><div class="media-title"><small>FROSTGLASS RIFT / THE LUMEN</small><h3>A colder frontier.</h3><span>VIEW CAPTURE <span aria-hidden="true">+</span></span></div></a>
+<a class="media-card reveal" href="assets/gameplay-bloom.jpg" data-lightbox data-image="assets/gameplay-bloom.jpg" data-caption="Actual in-engine capture · Bloom creatures and structures in the roster showcase."><img src="assets/gameplay-bloom.jpg" width="2880" height="1856" loading="lazy" alt="Violet Bloom creatures and alien structures in the game's roster showcase."><span class="media-top">IN-ENGINE SHOWCASE <span aria-hidden="true">↗</span></span><div class="media-title"><small>THE BLOOM / LIVING ARSENAL</small><h3>Unleash the swarm.</h3><span>VIEW CAPTURE <span aria-hidden="true">+</span></span></div></a>
+</div><div class="cinema-note"><span class="keycap">F8</span><p><strong>Step out of command. Into the moment.</strong> Switch to a clean cinematic camera, or watch two AI armies clash as the camera follows the action.</p></div>
+</div></section>
+<section class="war-room section-space" id="war-room" aria-labelledby="war-title"><div class="wrap"><div class="section-heading reveal"><p class="eyebrow">THE ART OF COMMAND</p><h2 id="war-title">OUTBUILD. OUTTHINK.<br><span>OVERWHELM.</span></h2></div><div class="doctrine-grid">
+<article class="doctrine reveal"><span class="doctrine-number">01</span><div class="doctrine-icon" aria-hidden="true">◇</div><h3>Build an empire.</h3><p>Turn crystal and flux into a war machine. Expand your base, unlock technology, and reinforce your army.</p></article>
+<article class="doctrine reveal"><span class="doctrine-number">02</span><div class="doctrine-icon" aria-hidden="true">⌖</div><h3>Own the center.</h3><p>Capture the relay with ground troops to earn bonus resources. Hold the advantage. Push for their base.</p></article>
+<article class="doctrine reveal"><span class="doctrine-number">03</span><div class="doctrine-icon" aria-hidden="true">⋈</div><h3>Make your opening.</h3><p>Deploy with a ready base and strike force, or start from the ground up in Classic Build-up. Choose your AI opponent and difficulty.</p></article>
+</div><a class="text-link manual-link" href="https://github.com/Slimetoad/nullfront/blob/main/FIELD-MANUAL.md">OPEN THE FIELD MANUAL <span aria-hidden="true">↗</span></a></div></section>
+<section class="download section-space" id="download" aria-labelledby="download-title"><div class="download-art" aria-hidden="true"></div><div class="wrap download-content"><p class="eyebrow">YOUR NEXT COMMAND</p><h2 id="download-title">THE FRONTIER<br><span>IS WAITING.</span></h2><p>Choose your side. Leave your mark.</p><a class="button button-gold" href="https://github.com/Slimetoad/nullfront/releases/download/v0.3.0/NULLFRONT-0.3.0-macOS-arm64.zip"><span>Download free for Mac</span><span aria-hidden="true">↓</span></a><p class="download-meta">VERSION 0.3.0 <span>•</span> 407 MiB DOWNLOAD <span>•</span> ~748 MiB INSTALLED</p><div class="platform-grid"><div><small>PLATFORM</small><strong>macOS 14+</strong></div><div><small>PROCESSOR</small><strong>Apple Silicon</strong></div><div><small>GAME MODE</small><strong>Single-player vs AI</strong></div></div><p class="native-note">A native Mac game. Download, install, and play.</p>
+<div class="install-details" id="installation"><details><summary>Installation &amp; first launch <span aria-hidden="true">+</span></summary><div class="details-body"><ol><li>Download and extract the ZIP.</li><li>Move <strong>NULLFRONT.app</strong> to your Applications folder.</li><li>Open the game, choose a faction, and press <strong>Enter</strong> to launch a skirmish.</li></ol><p>This public preview is ad-hoc signed and has not been notarized by Apple. macOS may block its first launch. If you choose to run it, follow <a href="https://support.apple.com/en-us/102445">Apple’s official Open Anyway instructions</a> for this app.</p><p>Windows, Intel Mac, browser play, and online multiplayer are not included.</p></div></details><details><summary>Verify your download <span aria-hidden="true">+</span></summary><div class="details-body"><p>SHA-256 for the Mac ZIP:</p><code>f06a41d13976442a5e850b294d862d0f1ffa835c1b2926c097c06e85f0441853</code><a href="https://github.com/Slimetoad/nullfront/releases/tag/v0.3.0">Release notes &amp; download files ↗</a></div></details></div><p class="early-note">Early public preview · Read the first-launch instructions above.</p>
+</div></section>
+</main>
+<footer class="site-footer wrap"><a class="brand" href="#hero"><img src="assets/emblem.svg" width="28" height="32" alt=""><span>NULLFRONT<small>FRONTIER WARS</small></span></a><p>An original science-fiction strategy game.<br><span>Built with Unreal Engine. Key art and faction illustrations include AI-generated artwork.</span></p><a href="https://github.com/Slimetoad/nullfront/releases">All releases ↗</a></footer>
+<dialog id="media-dialog" aria-label="Battlefield capture"><button id="media-close" aria-label="Close image">×</button><img id="media-image" alt=""><p id="media-caption"></p></dialog>
+</body></html>
