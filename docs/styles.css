@@ -15,3 +15,27 @@
 .campaign-controls strong{color:#e5d9c3;font-weight:600}.site-footer>p a{text-decoration:underline;text-underline-offset:3px;color:#a9bacb}.campaign-trailer{margin-top:44px;border:1px solid #a8bdcc35;background:#0c141f;overflow:hidden}.campaign-trailer video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#03070c}.campaign-trailer figcaption{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 28px;border-top:1px solid #a8bdcc26}.campaign-trailer h3{font-family:var(--display);font-size:27px;letter-spacing:.02em;margin-top:9px}.campaign-trailer figcaption>p{max-width:390px;font-size:11px;line-height:1.8;color:#9eafc0}.campaign-trailer .eyebrow{font-size:8px}.campaign-trailer video:focus-visible{outline:2px solid var(--cyan);outline-offset:-3px}
 @media(max-width:650px){.campaign-feature>img{object-position:75% center}.campaign-trailer{margin-top:28px}.campaign-trailer figcaption{display:block;padding:22px}.campaign-trailer figcaption>p{margin-top:13px}.campaign-trailer h3{font-size:25px}}
 @media(max-width:460px){.chapter-grid{grid-template-columns:1fr;gap:18px}.chapter-card img{aspect-ratio:2.05}.chapter-card>div{padding:22px}.chapter-card span{font-size:8px;letter-spacing:.12em}.chapter-card h3{font-size:26px;margin:12px 0}.chapter-card p{font-size:12px}.campaign-controls{gap:14px}.campaign-controls .keycap{flex-shrink:0}}
+
+/* 0.6: a quiet, typographic introduction to the completed battlefield art. */
+.frontier-update{position:relative;background:radial-gradient(ellipse at 50% 5%,#21374855,transparent 64%),#080e16;border-bottom:1px solid var(--line);overflow:hidden}
+.frontier-update:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent calc(50% - .5px),#b6cddd08 50%,transparent calc(50% + .5px));z-index:0}
+.frontier-update>.wrap{position:relative}
+.frontier-update .section-heading{margin-bottom:40px}
+.frontier-update .section-heading>p:last-child{max-width:630px;margin-inline:auto;line-height:1.9}
+.roster-numbers{display:grid;grid-template-columns:repeat(3,1fr);margin:0 auto 49px;max-width:970px;border-block:1px solid #d2b27d40;padding-block:25px}
+.roster-numbers>div{display:flex;flex-direction:column-reverse;text-align:center;border-right:1px solid var(--line);padding:0 20px}
+.roster-numbers>div:last-child{border-right:0}
+.roster-numbers dt{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#b7c5d2;line-height:1.6}
+.roster-numbers dd{margin:0 0 12px;font-family:var(--display);font-size:clamp(56px,6vw,88px);line-height:1;letter-spacing:.015em;color:#e8d5b3;font-variant-numeric:tabular-nums}
+.frontier-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px}
+.feature-coordinate{font-size:8px;letter-spacing:.17em;color:var(--cyan)}
+.frontier-feature{position:relative;padding-top:20px;border-top:1px solid #84c4df55}
+.frontier-feature:before{position:absolute;content:"";width:5px;height:5px;top:-3px;left:0;background:var(--cyan);transform:rotate(45deg)}
+.frontier-feature h3{margin-top:19px;font-family:var(--display);font-size:36px;line-height:1.04;letter-spacing:.02em;text-transform:uppercase}
+.frontier-feature p{margin-top:19px;color:var(--muted);font-size:12px;line-height:1.9}
+.frontier-footer{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line)}
+.frontier-footer p{font-size:11px;color:#8fa7ba}
+.frontier-footer .text-link{font-size:8px;white-space:nowrap}
+
+@media(max-width:900px){.frontier-features{gap:27px}.frontier-feature h3{font-size:30px}.frontier-feature p{font-size:11px}.roster-numbers dd{font-size:65px}}
+@media(max-width:650px){.frontier-update .section-heading>p:last-child{font-size:12px}.roster-numbers{padding-block:22px;margin-bottom:36px}.roster-numbers>div{padding-inline:9px}.roster-numbers dd{font-size:52px;margin-bottom:10px}.roster-numbers dt{font-size:7px;letter-spacing:.05em;line-height:1.5;min-height:3em}.frontier-features{grid-template-columns:1fr;gap:32px}.frontier-feature{padding-top:16px}.frontier-feature h3{font-size:31px}.frontier-feature h3 br{display:none}.frontier-feature h3 br:after{content:" "}.frontier-feature p{font-size:12px;max-width:500px;margin-top:14px}.frontier-footer{display:block;margin-top:32px}.frontier-footer .text-link{margin-top:16px;font-size:8px}}

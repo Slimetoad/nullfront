@@ -1,6 +1,6 @@
 # NULLFRONT: Frontier Wars
 
-An original, native science-fiction real-time strategy game built in Unreal Engine 5.8. Play **The Quiet Meridian** story campaign, or command one of three factions in a skirmish. This manual covers version **0.5.0**.
+An original, native science-fiction real-time strategy game built in Unreal Engine 5.8. Play **The Quiet Meridian** story campaign, or command one of three factions in a skirmish. This manual covers version **0.6.0**.
 
 ## Deploy
 
@@ -44,6 +44,8 @@ In Rapid Deployment, press **F2** to select your army. Use the objective panel's
 
 Keep ground combat troops inside the relay ring for **10 game seconds** to capture it. Workers, aircraft, and temporary summons cannot capture or contest it. Owning the relay adds **4 Crystal and 1 Flux per game second**, even after your army moves away. Enemy ground troops in the ring interrupt that income; opposing armies in the ring freeze capture progress. Retake it or push for the enemy base—the victory condition remains destroying every enemy structure.
 
+Failed ability targeting stays active so you can correct the aim immediately; press **Esc** to cancel.
+
 ## Choose your faction
 
 | Faction | How it fights | Hero |
@@ -53,6 +55,12 @@ Keep ground combat troops inside the relay ring for **10 game seconds** to captu
 | **The Lumen** | Shields and hard-light technology. Weavers start constructs and can immediately move on. Shields regenerate out of combat. | **Aurelion, the First Light** |
 
 Each faction has its own workers, combat units, hero, production structures, defenses, research, and active abilities. Hover command buttons to inspect costs, requirements, and hotkeys.
+
+## Read the heavy attacks
+
+A sieged Hammer charges for **0.45 seconds**, a Behemoth winds up for **0.40 seconds**, and a Luminar charges for **0.65 seconds** before releasing its attack. Weapon glow and ground markings announce the threat. Haste shortens these times.
+
+The Luminar commits to the marked beam lane: move sideways to escape it. Close inside a sieged Hammer’s minimum range or withdraw from melee reach before a Behemoth releases. Your move or cast orders cancel an unfired charge; ordinary incoming damage does not stun-lock the attacker. Sustained weapon cooldowns and damage values remain unchanged.
 
 ## Controls
 
@@ -69,7 +77,7 @@ Each faction has its own workers, combat units, hero, production structures, def
 | Ctrl or Command + 0–9 | Assign a control group |
 | Shift + 0–9 | Add selected units to a control group |
 | 0–9 | Select a control group; double-tap to jump to it |
-| F1 / F2 | Select an idle worker / your army |
+| F1 / F2 | Cycle through idle workers / select your complete army |
 | Backspace | Cycle through your bases |
 | Space | Jump to the last alert |
 | Arrows / screen edge / middle-drag | Pan the camera |
@@ -86,10 +94,10 @@ Each faction has its own workers, combat units, hero, production structures, def
 | Esc | Cancel the current targeting/build action, or open the pause menu |
 | F10 | Open the pause menu |
 
-**Cinematic view:** F8 eases into a lower angle with depth of field while slowly orbiting your current view. It hides the command interface, cursor, selection rings, and tactical relay markers. In observed AI matches, the camera follows active battles and moves in for close views of units; manual panning suspends this for six seconds. Arrows pan and the wheel zooms. The battle continues; press F8 again to return to command.
+**Cinematic view:** F8 eases into a lower angle with depth of field while slowly orbiting your current view. It hides the command interface, cursor, selection rings, and tactical relay markers. In observed AI matches, the camera follows active battles and moves in for close views of units; manual panning, middle-dragging, or zooming suspends this for six seconds. Arrows pan and the wheel zooms. The battle continues; press F8 again to return to command.
 
 The stereo soundtrack crossfades between **Frontier** and **Onslaught** as nearby fighting intensifies. Weapon sounds follow their position on screen, including while the camera turns; distant sounds soften.
 
 The pause menu offers **Resume**, **Controls**, **Surrender**, **Graphics**, and **Quit to Title**.
 
-Campaign paintings and character concepts include AI-generated artwork. New character and heavy-unit assets use Nano Banana Pro concepts and Meshy models, rigs, and animations generated through Fal. The opening cinematic uses MiniMax H3 Max via Fal.ai; its imagery is cinematic, not gameplay footage. Music and combat effects use ElevenLabs models through Fal. See the [project credits](README.md#credits) for further details.
+Campaign paintings and character concepts include AI-generated artwork. Character, vehicle, structure, and scenery assets use Nano Banana Pro concepts and Meshy models generated through Fal. Animated characters also use Meshy rigs and animations, with game-specific aiming, blending, and articulated model parts. The opening cinematic uses MiniMax H3 Max via Fal.ai; its imagery is cinematic, not gameplay footage. Music and combat effects use ElevenLabs models through Fal. See the [project credits](README.md#credits) for further details.
