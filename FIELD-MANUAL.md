@@ -13,7 +13,7 @@ Choose your faction, an enemy faction or **Random**, and **Easy**, **Normal**, *
 
 **Rapid Deployment** is on by default. You begin with 12 workers, a starter base, a mixed strike force, 250 Crystal, and 75 Flux. Toggle it to **Classic Build-up** for the original opening: a headquarters, 10 workers, and 50 Crystal, with no relay objective.
 
-Select **Watch Battle** to observe two AI armies. **Field Manual** opens the controls. **Graphics** cycles Epic → High → Medium → Low and saves your choice; it is also available in the pause menu.
+Select **Watch Battle** (or press **F9** at the title screen) for an immediate combined-arms clash using your chosen factions and battlefield. It starts in cinematic view and continues as a real AI skirmish. **Field Manual** opens the controls. **Graphics** cycles Epic → High → Medium → Low and saves your choice; it is also available in the pause menu.
 
 ## Your first offensive
 
@@ -57,9 +57,12 @@ Each faction has its own workers, combat units, hero, production structures, def
 | Alt | Show all health bars |
 | + / − | Increase / decrease game speed |
 | F8 | Toggle cinematic view |
+| F9 at the title screen | Launch a cinematic battle |
 | Esc | Cancel the current targeting/build action, or open the pause menu |
 | F10 | Open the pause menu |
 
-**Cinematic view:** F8 eases into a lower angle, a longer lens, and focused depth of field while slowly orbiting your current view. It hides the command interface, cursor, selection rings, and tactical relay markers. In observed AI matches, the camera follows active battles; manual panning suspends this for six seconds. Arrows pan and the wheel zooms. The battle continues; press F8 again to return to command.
+**Cinematic view:** F8 eases into a lower angle, a focused lens, and focused depth of field while slowly orbiting your current view. It hides the command interface, cursor, selection rings, and tactical relay markers. In observed AI matches, the camera follows active battles; manual panning suspends this for six seconds. Arrows pan and the wheel zooms. The battle continues; press F8 again to return to command.
+
+The stereo soundtrack crossfades between **Frontier** and **Onslaught** as nearby fighting intensifies. Weapon sounds follow their position on screen, including while the camera turns; distant sounds soften.
 
 The pause menu offers **Resume**, **Controls**, **Surrender**, **Graphics**, and **Quit to Title**.
