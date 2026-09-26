@@ -13,7 +13,7 @@ Press **F6** or choose **Story Campaign** for the campaign. For a skirmish, choo
 
 **Rapid Deployment** is on by default. You begin with 12 workers, a starter base, a mixed strike force, 250 Crystal, and 75 Flux. Toggle it to **Classic Build-up** for the original opening: a headquarters, 10 workers, and 50 Crystal, with no relay objective.
 
-Select **Watch Battle** (or press **F9** at the title screen) for an immediate combined-arms clash using your chosen factions and battlefield. It starts in cinematic view and continues as a real AI skirmish. **Field Manual** opens the controls. **Graphics** cycles Epic → High → Medium → Low and saves your choice; it is also available in the pause menu.
+Select **Watch Battle** (or press **F9** at the title screen) for an immediate combined-arms clash using your chosen factions and battlefield. It starts in cinematic view and continues as a real AI skirmish. **Field Manual** opens the controls. **Graphics** cycles Cinematic → Balanced → Performance → Low and saves your choice; it is also available in the pause menu. Balanced is the new default, targeting steady 60 fps with dynamic lighting, detailed models, and effects. Choose Performance or Low for more rendering headroom, or Cinematic for full internal resolution and higher lighting quality. The game caps rendering at 60 fps; actual performance depends on the scene and hardware.
 
 The opening cinematic introduces the silent colony and the Meridian. Press any key to skip it. Choose **Watch Intro** or press **F7** at the title screen to replay it.
 
@@ -94,7 +94,7 @@ The Luminar commits to the marked beam lane: move sideways to escape it. Close i
 | Esc | Cancel the current targeting/build action, or open the pause menu |
 | F10 | Open the pause menu |
 
-**Cinematic view:** F8 eases into a lower angle with depth of field while slowly orbiting your current view. It hides the command interface, cursor, selection rings, and tactical relay markers. In observed AI matches, the camera follows active battles and moves in for close views of units; manual panning, middle-dragging, or zooming suspends this for six seconds. Arrows pan and the wheel zooms. The battle continues; press F8 again to return to command.
+**Cinematic view:** F8 eases into a lower angle while slowly orbiting your current view. The Cinematic graphics profile also adds depth of field; other profiles keep units in sharp focus. It hides the command interface, cursor, selection rings, and tactical relay markers. In observed AI matches, the camera follows active battles and moves in for close views of units; manual panning, middle-dragging, or zooming suspends this for six seconds. Arrows pan and the wheel zooms. The battle continues; press F8 again to return to command.
 
 The stereo soundtrack crossfades between **Frontier** and **Onslaught** as nearby fighting intensifies. Weapon sounds follow their position on screen, including while the camera turns; distant sounds soften.
 

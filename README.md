@@ -12,6 +12,8 @@ Detailed art now covers **all 47 battlefield types**, including **23 structures*
 
 Heavy attacks now announce their release: sidestep a Luminar beam, escape melee reach, or close inside a deployed Hammer’s minimum range. Units brace and recoil, wreckage settles, and important impacts and commands retain room in the audio mix. F1 cycles idle workers, F2 selects the complete army, and manual zooming keeps control of the cinematic camera.
 
+The performance pass introduces saved **Balanced, Performance, Low, and Cinematic** graphics profiles. Balanced is the default, with a 60 fps frame limit, bounded lighting updates, leaner effects rendering, streamed combat audio, and less repeated AI/pathfinding work. The detailed models remain across every profile; actual frame rate varies with hardware and battle size.
+
 ## The Quiet Meridian
 
 Eleven days after a colony falls silent, its relay transmits a child's voice. Commander Ada Voss has orders to destroy the signal. She chooses to answer it.
@@ -39,7 +41,7 @@ This is a downloadable Mac game. Browser play, Windows, Intel Mac, and online mu
 
 ## Install and play
 
-**Requirements:** Apple Silicon Mac (M-series), macOS 14 or newer. The download is **920 MiB** (965,057,666 bytes), and the app is approximately **1.25 GiB** (1,334,289,971 bytes). Allow additional space to download and extract the archive. Performance varies by hardware; use the in-game Graphics setting if needed.
+**Requirements:** Apple Silicon Mac (M-series), macOS 14 or newer. The download is **920 MiB** (965,061,636 bytes), and the app is approximately **1.25 GiB** (1,334,315,731 bytes). Allow additional space to download and extract the archive. Performance varies by hardware; use the in-game Graphics setting if needed.
 
 1. Open the [latest release](https://github.com/Slimetoad/nullfront/releases/latest) and download **NULLFRONT-0.6.0-macOS-arm64.zip**.
 2. Extract the ZIP and move **NULLFRONT.app** into your Applications folder.
