@@ -9,7 +9,7 @@
   movie.controls = false;
   let pendingSeek = null;
   let signal = null;
-  const pauseOthers = active => document.querySelectorAll('video,audio').forEach(media => { if (media !== active) media.pause(); });
+  const pauseOthers = active => document.querySelectorAll('video,audio').forEach(media => { if (media !== active && !active.classList.contains('hero-film')) media.pause(); });
   // One soundtrack at a time across the premiere, archive and original score.
   document.querySelectorAll('video,audio').forEach(media => media.addEventListener('play', () => pauseOthers(media)));
   const format = n => `${String(Math.floor(n / 60)).padStart(2,'0')}:${String(Math.floor(n % 60)).padStart(2,'0')}`;
@@ -78,20 +78,4 @@
     document.querySelectorAll('[data-signal-palette]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
     startSignal(); signal?.setPalette(button.dataset.signalPalette);
   }));
-  const loadButton = document.querySelector('#hangar-load');
-  loadButton.addEventListener('click', async () => {
-    loadButton.disabled = true;
-    document.querySelector('#hangar-status').textContent = 'Opening the hangar…';
-    try {
-      const { mountHangar } = await import('./hangar.js');
-      const session = await mountHangar(document.querySelector('#hangar-viewport'));
-      if (!session) return;
-      document.querySelector('#hangar-controls').hidden = false;
-      document.querySelector('[data-view=hero]').focus({preventScroll:true});
-    } catch {
-      loadButton.disabled = false;
-      loadButton.textContent = 'Try the 3D hangar again';
-      document.querySelector('#hangar-status').textContent = '3D could not load. The native gallery remains available.';
-    }
-  });
 })();

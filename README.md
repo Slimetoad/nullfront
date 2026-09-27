@@ -6,6 +6,10 @@ A native science-fiction real-time strategy game for Apple Silicon Macs. Lead Co
 
 ![NULLFRONT 0.6.0 gameplay: Concord armor and Bloom creatures fighting at the central relay](docs/assets/battle-0.6.jpg)
 
+## Unit identity and shading · 0.6.1
+
+The Lancer now carries a dedicated shoulder launcher and armored ammunition pack. Voss, Blightcaller, Veyla, Cantor and Aurelion receive distinct animated role equipment, also visible in portraits. Nine animated body assets preserve authored surface normals. The role variants still share their faction's underlying body and skeleton; this update differentiates their assembled appearances. Hero proportions have also been refined.
+
 ## A Living Frontier · 0.6.0
 
 Detailed art now covers **all 47 battlefield types**, including **23 structures** across the Concord, Bloom, and Lumen. Animated workers and aircraft join the infantry and heavy armor, with moving tools, thrusters, weapons, and turrets. Textured fire, smoke, energy, and impact effects play across newly detailed basalt, mineral vents, and resource crystals.
@@ -41,15 +45,15 @@ This is a downloadable Mac game. Browser play, Windows, Intel Mac, and online mu
 
 ## Install and play
 
-**Requirements:** Apple Silicon Mac (M-series), macOS 14 or newer. The download is **920 MiB** (965,061,636 bytes), and the app is approximately **1.25 GiB** (1,334,315,731 bytes). Allow additional space to download and extract the archive. Performance varies by hardware; use the in-game Graphics setting if needed.
+**Requirements:** Apple Silicon Mac (M-series), macOS 14 or newer. The download is **920 MiB** (964,963,199 bytes), and the app is approximately **1.25 GiB** (1,334,293,233 bytes). Allow additional space to download and extract the archive. Performance varies by hardware; use the in-game Graphics setting if needed.
 
-1. Open the [latest release](https://github.com/Slimetoad/nullfront/releases/latest) and download **NULLFRONT-0.6.0-macOS-arm64.zip**.
+1. Open the [latest release](https://github.com/Slimetoad/nullfront/releases/latest) and download **NULLFRONT-0.6.1-macOS-arm64.zip**.
 2. Extract the ZIP and move **NULLFRONT.app** into your Applications folder.
 3. Open NULLFRONT. Press **F6** for the campaign, or choose your faction and map and press **Enter** to launch a skirmish.
 
 This public preview is ad-hoc signed and has **not been notarized by Apple**. macOS may block its first launch. If you choose to run it, follow [Apple’s instructions for opening an app from an unknown developer](https://support.apple.com/en-us/102445): try opening the app, then use **System Settings → Privacy & Security → Open Anyway** for this app. No system-wide security change is needed.
 
-The release includes [SHA256SUMS-0.6.0.txt](SHA256SUMS-0.6.0.txt) to verify the download and **FIELD-MANUAL.md** for detailed controls. GitHub’s automatically generated “Source code” archives contain this website and documentation; download the named Mac ZIP to play.
+The release includes [SHA256SUMS-0.6.1.txt](SHA256SUMS-0.6.1.txt) to verify the download and **FIELD-MANUAL.md** for detailed controls. GitHub’s automatically generated “Source code” archives contain this website and documentation; download the named Mac ZIP to play.
 
 ## First commands
 

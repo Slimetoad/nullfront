@@ -11,7 +11,7 @@ function disposeTree(root) {
   textures.forEach(t=>{t.dispose();t.source?.data?.close?.();});geometries.forEach(g=>g.dispose());
 }
 
-export async function mountHangar(host) {
+export async function mountHangar(host, unit) {
   instances.get(host)?.();
   const startupCleanup=[];
   let initializedDispose=null;
@@ -24,12 +24,12 @@ export async function mountHangar(host) {
   renderer.setClearColor(0x060c13,0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.2;
+  renderer.toneMappingExposure = .95;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.domElement.setAttribute('role','img');
   renderer.domElement.tabIndex=0;
-  renderer.domElement.setAttribute('aria-label','Interactive 3D Concord Skyhawk gunship. Drag or use arrow keys to rotate; plus and minus zoom. Camera presets are below.');
+  renderer.domElement.setAttribute('aria-label',`Interactive 3D ${unit.name}. Drag or use arrow keys to rotate; plus and minus zoom. Camera presets are below.`);
   host.append(renderer.domElement);
   startupCleanup.push(()=>{renderer.dispose();renderer.domElement.remove();});
   const scene = new THREE.Scene();
@@ -59,9 +59,9 @@ export async function mountHangar(host) {
   scene.environment = environment.texture;
   scene.environmentIntensity = .65;
   room.dispose(); pmrem.dispose();
-  const key = new THREE.DirectionalLight(0xffddb4,4.5); key.position.set(-4,7,5); key.castShadow=true; key.shadow.mapSize.set(512,512); key.shadow.camera.left=-4; key.shadow.camera.right=4; key.shadow.camera.top=4; key.shadow.camera.bottom=-4; key.shadow.normalBias=.025; scene.add(key);
+  const key = new THREE.DirectionalLight(0xffddb4,3.2); key.position.set(-4,7,5); key.castShadow=true; key.shadow.mapSize.set(512,512); key.shadow.camera.left=-4; key.shadow.camera.right=4; key.shadow.camera.top=4; key.shadow.camera.bottom=-4; key.shadow.normalBias=.025; scene.add(key);
   const rim = new THREE.DirectionalLight(0x7cceff,3.2); rim.position.set(4,4,-4); scene.add(rim);
-  const fill = new THREE.HemisphereLight(0xc2dceb,0x0b1018,1.7); scene.add(fill);
+  const fill = new THREE.HemisphereLight(0xc2dceb,0x0b1018,1.25); scene.add(fill);
   const floor = new THREE.Mesh(new THREE.CylinderGeometry(2.8,2.86,.12,80),new THREE.MeshStandardMaterial({color:0x09141e,metalness:.25,roughness:.8}));
   floor.receiveShadow=true; floor.position.y=-.09; scene.add(floor);
   const ringMaterial = new THREE.MeshBasicMaterial({color:0x80c9ef,transparent:true,opacity:.6});
@@ -73,6 +73,7 @@ export async function mountHangar(host) {
   outer.position.y=-.015; scene.add(outer);
   let ready=false,disposed=false,visible=true,lost=false,frame=0,lastFrame=0,spinning=false;
   let cool=false;
+  let targetY=.62;
   const motion = () => document.body.dataset.motion !== 'off' && !matchMedia('(prefers-reduced-motion: reduce)').matches;
   const maySpin = () => spinning && motion() && ![...document.querySelectorAll('video')].some(v=>!v.paused);
   function schedule() {
@@ -127,7 +128,7 @@ export async function mountHangar(host) {
   const positions={hero:[-5,3.2,5.8],side:[0,2,7.5],top:[0,8,.1]};
   viewButtons.forEach(button=>on(button,'click',()=>{
     spinning=false;controls.autoRotate=false;spinButton.setAttribute('aria-pressed','false');
-    camera.position.set(...positions[button.dataset.view]);controls.target.set(0,.62,0);controls.update();
+    camera.position.set(...positions[button.dataset.view]);controls.target.set(0,targetY,0);controls.update();
     viewButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));schedule();
   }));
   on(spinButton,'click',()=>{
@@ -148,7 +149,7 @@ export async function mountHangar(host) {
   on(renderer.domElement,'webglcontextrestored',()=>{lost=false;if(ready)host.dataset.state='ready';schedule();});
   function dispose() {
     if(disposed)return;disposed=true;stop();abort.abort();resize.disconnect();visibility.disconnect();motionObserver.disconnect();controls.dispose();
-    disposeTree(scene);environment.dispose();renderer.dispose();renderer.domElement.remove();
+    disposeTree(scene);environment.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();
     if(instances.get(host)===dispose)instances.delete(host);
   }
   initializedDispose=dispose;
@@ -157,8 +158,8 @@ export async function mountHangar(host) {
   on(window,'pagehide',event=>{if(!event.persisted)dispose();else stop();});
   on(window,'pageshow',schedule);
   try {
-    const gltf=await new GLTFLoader().loadAsync(new URL('./assets/showcase-unit.glb',import.meta.url).href,progress=>{
-      if(progress.total)document.querySelector('#hangar-status').textContent=`Loading Skyhawk · ${Math.round(progress.loaded/progress.total*100)}%`;
+    const gltf=await new GLTFLoader().loadAsync(new URL(unit.model,import.meta.url).href,progress=>{
+      if(!disposed && progress.total)document.querySelector('#hangar-status').textContent=`Loading ${unit.name} · ${Math.round(progress.loaded/progress.total*100)}%`;
     });
     if(disposed){disposeTree(gltf.scene);return null;}
     const model=gltf.scene;
@@ -167,9 +168,15 @@ export async function mountHangar(host) {
     const scale=4.2/Math.max(size.x,size.y,size.z);model.scale.setScalar(scale);
     model.position.set(-center.x*scale,-box.min.y*scale+.22,-center.z*scale);
     scene.add(model);
+    targetY=size.y*scale*.5+.22;
+    controls.target.set(0,targetY,0);
+    const distance=8.5;
+    positions.hero=[-5,targetY+3.2,6.2];positions.side=[0,targetY+1,distance];positions.top=[0,targetY+distance,.1];
+    camera.position.set(...positions.hero);controls.update();
+    host.dataset.model=unit.id;
     await renderer.compileAsync(scene,camera);
     if(disposed)return null;
-    ready=true;host.dataset.state='ready';document.querySelector('#hangar-status').textContent='Skyhawk ready.';
+    ready=true;host.dataset.state='ready';document.querySelector('#hangar-status').textContent=`${unit.name} ready.`;
     renderer.setSize(host.clientWidth,host.clientHeight,false);camera.aspect=host.clientWidth/host.clientHeight;camera.updateProjectionMatrix();schedule();
     return {dispose};
   } catch(error) {if(disposed)return null;dispose();host.dataset.state='error';throw error;}

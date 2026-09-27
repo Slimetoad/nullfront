@@ -12,7 +12,7 @@
     $('[data-motion-label]').textContent = on ? 'ON' : 'OFF';
     if (!on) $$('.reveal.pending').forEach(el => el.classList.remove('pending'));
   }
-  setMotion(!reduced.matches);
+  setMotion(false);
   $('#motion-toggle').addEventListener('click', () => { motionChosen = true; setMotion(body.dataset.motion !== 'on'); });
   reduced.addEventListener('change', () => { if (!motionChosen) setMotion(!reduced.matches); });
   const hero = $('#hero');

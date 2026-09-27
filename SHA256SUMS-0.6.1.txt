@@ -1,0 +1,1 @@
+bfcb43052669f021857cfafd9aefefeea4cca5dde6efa9994837e72130b6b3ce  NULLFRONT-0.6.1-macOS-arm64.zip
