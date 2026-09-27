@@ -21,13 +21,13 @@
     },
     gameplay: {
       title: 'Gameplay trailer',
-      source: 'assets/gameplay-trailer.mp4',
-      poster: 'assets/gameplay-poster.webp',
-      captions: 'assets/gameplay-captions.vtt',
+      source: 'assets/gameplay-command-trailer.mp4',
+      poster: 'assets/gameplay-command-poster.webp',
+      captions: 'assets/gameplay-command-captions.vtt',
       kind: 'GAMEPLAY / ACTUAL GAME CAPTURES',
-      label: 'NULLFRONT gameplay trailer — actual game captures and native unit galleries',
-      disclosure: 'Gameplay trailer · Captured from the current native Mac development build. Unit gallery sequences are labeled in the footage; they show the roster rather than live battles.',
-      description: 'See NULLFRONT: Frontier Wars in native game footage captured from the 0.6.2 development build at the cinematic graphics preset. This edit combines AI skirmishes and labeled animated unit galleries, with the game’s music and effects mixed for the trailer. English captions are available in the player.'
+      label: 'NULLFRONT gameplay trailer — commands, combat and abilities captured in game',
+      disclosure: 'Take command · Squad maneuvers, siege tactics and faction abilities captured in the native game. Includes one labeled Skyhawk 3D showcase.',
+      description: 'Follow staged command sequences using the real game systems: flank with squads, deploy siege armor, call an Orbital Lance and combine Lumen abilities. Captured from the native 0.6.2 development build at the cinematic graphics preset. Weapon and ability sounds are synchronized from the game’s event recordings and mixed with its score. A brief Skyhawk model study is labeled separately. English captions are available in the player.'
     }
   };
   const choices = [...section.querySelectorAll('[data-trailer]')].filter(node => node.tagName === 'BUTTON');
@@ -96,6 +96,7 @@
   choices.forEach(button => button.addEventListener('click', () => selectTrailer(button.dataset.trailer)));
   updatePresentation();
   movie.controls = false;
+  if (new URLSearchParams(window.location.search).get('trailer') === 'gameplay') selectTrailer('gameplay');
   const choiceGroup = section.querySelector('.trailer-choices');
   if (choiceGroup) choiceGroup.hidden = false;
 
