@@ -139,6 +139,17 @@
       state.textContent = movie.error ? 'FILM UNAVAILABLE · TRY SAVE TRAILER' : 'PRESS PLAY TO CONTINUE';
     });
   }
+  document.querySelectorAll('[data-main-trailer]').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    selectTrailer('main');
+    const mainUrl = new URL(window.location.href);
+    mainUrl.searchParams.set('trailer', 'main');
+    mainUrl.hash = 'cinema-screen';
+    window.history.replaceState(null, '', mainUrl);
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches || document.body.dataset.motion === 'off';
+    screen.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'center'});
+    playAt(0);
+  }));
   cover.addEventListener('click', () => playAt());
   document.querySelector('#trailer-replay')?.addEventListener('click', () => playAt(0));
   movie.addEventListener('loadedmetadata', () => {
