@@ -9,6 +9,16 @@
   if (!section || !movie || !cover || !state || !screen || !source) return;
 
   const trailers = {
+    main: {
+      title: 'Main trailer',
+      source: 'assets/nullfront-main-trailer-30s.mp4',
+      poster: 'assets/nullfront-main-trailer-poster.webp',
+      captions: null,
+      kind: 'OFFICIAL TRAILER / 30-SECOND PREMIERE',
+      label: 'NULLFRONT main trailer — 30-second premiere',
+      disclosure: 'Main trailer · Story cinematics and native battle footage from NULLFRONT: Frontier Wars.',
+      description: 'Tony Studios presents NULLFRONT: Frontier Wars. Watch the 30-second main trailer, featuring the frontier, its three rival factions and native battle footage. The cinematic and gameplay trailers are also available above.'
+    },
     cinematic: {
       title: 'Cinematic trailer',
       source: 'assets/cinematic-trailer.mp4',
@@ -33,11 +43,12 @@
   const choices = [...section.querySelectorAll('[data-trailer]')].filter(node => node.tagName === 'BUTTON');
   const duration = section.querySelector('[data-trailer-duration]');
   const rig = document.querySelector('#cinema-rig');
-  let selected = 'cinematic';
+  let selected = 'main';
+  let captionsPreferred = false;
   let pendingSeek = null;
   let playRequest = 0;
   let signal = null;
-  const knownDurations = {};
+  const knownDurations = {main: 30};
   const format = n => `${String(Math.floor(n / 60)).padStart(2, '0')}:${String(Math.floor(n % 60)).padStart(2, '0')}`;
   const setText = (selector, text) => { const node = section.querySelector(selector); if (node) node.textContent = text; };
   const showDuration = seconds => {
@@ -65,7 +76,13 @@
     setText('#trailer-caption-download', `Download ${selected} captions (VTT) ↓`);
     setLink('#trailer-download', trailer.source, `Download the ${trailer.title.toLowerCase()}`);
     setLink('#trailer-fallback', trailer.source, `Watch the ${trailer.title.toLowerCase()}`);
-    setLink('#trailer-caption-download', trailer.captions, `Download ${selected} captions (VTT)`);
+    const captionLink = section.querySelector('#trailer-caption-download');
+    if (captionLink) {
+      captionLink.hidden = !trailer.captions;
+      captionLink.style.display = trailer.captions ? '' : 'none';
+      if (trailer.captions) setLink('#trailer-caption-download', trailer.captions, `Download ${selected} captions (VTT)`);
+      else captionLink.removeAttribute('href');
+    }
     showDuration(knownDurations[selected]);
   }
   function selectTrailer(key) {
@@ -73,19 +90,21 @@
     ++playRequest; // Ignore a rejected play promise belonging to the previous source.
     movie.pause();
     if (movie.readyState > 0) movie.currentTime = 0;
-    const captionsWereShowing = [...movie.textTracks].some(track => track.mode === 'showing');
+    if (movie.textTracks.length) captionsPreferred = [...movie.textTracks].some(track => track.mode === 'showing');
     pendingSeek = null;
     selected = key;
     source.src = trailers[key].source;
     movie.querySelectorAll('track').forEach(track => track.remove());
-    const track = document.createElement('track');
-    track.kind = 'captions';
-    track.srclang = 'en';
-    track.label = 'English';
-    track.src = trailers[key].captions;
-    track.default = captionsWereShowing;
-    movie.append(track);
-    if (captionsWereShowing) track.track.mode = 'showing';
+    if (trailers[key].captions) {
+      const track = document.createElement('track');
+      track.kind = 'captions';
+      track.srclang = 'en';
+      track.label = 'English';
+      track.src = trailers[key].captions;
+      track.default = captionsPreferred;
+      movie.append(track);
+      if (captionsPreferred) track.track.mode = 'showing';
+    }
     movie.controls = false;
     cover.hidden = false;
     updatePresentation();
@@ -96,7 +115,8 @@
   choices.forEach(button => button.addEventListener('click', () => selectTrailer(button.dataset.trailer)));
   updatePresentation();
   movie.controls = false;
-  if (new URLSearchParams(window.location.search).get('trailer') === 'gameplay') selectTrailer('gameplay');
+  const requestedTrailer = new URLSearchParams(window.location.search).get('trailer');
+  if (requestedTrailer === 'gameplay' || requestedTrailer === 'cinematic') selectTrailer(requestedTrailer);
   const choiceGroup = section.querySelector('.trailer-choices');
   if (choiceGroup) choiceGroup.hidden = false;
 
