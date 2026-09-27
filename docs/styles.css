@@ -24,3 +24,6 @@ body[data-motion=off] *,body[data-motion=off] *:before,body[data-motion=off] *:a
 @media(max-width:600px){.hero-description{font-size:13px}.intro-copy,.faction-description,.doctrine-grid article>p:last-child,.intel-feature p:not(.eyebrow),.intel-side p:not(.eyebrow),.faq details>div{font-size:14px}.faq summary{font-size:14px}.section-heading>p{font-size:14px}.faction-tabs small{font-size:7px}.platform-note{font-size:7px}}
 
 .footer-legal{color:#83929e;font-size:10px}.footer-main>p{color:#83929e}.chapter-tabs button:focus-visible{z-index:3}
+
+/* Help is visible beside the public download. */
+.install-note{max-width:670px;margin:28px auto 0;padding:22px 24px;border:1px solid #dfb88955;background:#0b111ae8;text-align:left;font-size:13px;line-height:1.75;color:#c2cbd4}.install-note>strong{font-size:15px;color:#f0ddc3}.install-note p{margin-top:7px}.install-note a{display:inline-block;margin-top:12px;color:#dfb889;text-decoration:underline;text-underline-offset:4px}.install-note .install-compatibility{font-size:11px;color:#a6b3bf;margin-top:13px}.install-steps{padding-left:20px}.install-steps li+li{margin-top:9px}.install-steps+p{margin-top:16px}#installation{scroll-margin-top:95px}

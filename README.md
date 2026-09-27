@@ -45,7 +45,7 @@ This is a downloadable Mac game. Browser play, Windows, Intel Mac, and online mu
 
 ## Install and play
 
-**Requirements:** Apple Silicon Mac (M-series), macOS 14 or newer. The download is **920 MiB** (964,963,199 bytes), and the app is approximately **1.25 GiB** (1,334,293,233 bytes). Allow additional space to download and extract the archive. Performance varies by hardware; use the in-game Graphics setting if needed.
+**Requirements:** Apple Silicon Mac (M-series), macOS 14 or newer. The download is **920 MiB** (964,963,199 bytes), and the app is approximately **1.25 GiB** (1,334,293,233 bytes). Allow at least **3 GB free** to download, extract, and install the archive. Performance varies by hardware; use the in-game Graphics setting if needed.
 
 1. Open the [latest release](https://github.com/Slimetoad/nullfront/releases/latest) and download **NULLFRONT-0.6.1-macOS-arm64.zip**.
 2. Extract the ZIP and move **NULLFRONT.app** into your Applications folder.
@@ -54,6 +54,8 @@ This is a downloadable Mac game. Browser play, Windows, Intel Mac, and online mu
 This public preview is ad-hoc signed and has **not been notarized by Apple**. macOS may block its first launch. If you choose to run it, follow [Apple’s instructions for opening an app from an unknown developer](https://support.apple.com/en-us/102445): try opening the app, then use **System Settings → Privacy & Security → Open Anyway** for this app. No system-wide security change is needed.
 
 The release includes [SHA256SUMS-0.6.1.txt](SHA256SUMS-0.6.1.txt) to verify the download and **FIELD-MANUAL.md** for detailed controls. GitHub’s automatically generated “Source code” archives contain this website and documentation; download the named Mac ZIP to play.
+
+Having trouble? See the [installation and troubleshooting guide](INSTALL.md) for first-launch warnings, incompatible Macs, incomplete downloads, and checksum verification.
 
 ## First commands
 
