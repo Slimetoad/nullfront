@@ -1,10 +1,22 @@
 # NULLFRONT: Frontier Wars
 
-A native science-fiction real-time strategy game for Apple Silicon Macs. Lead Commander Ada Voss through a four-chapter story campaign, or command one of three original factions in skirmishes across two battlefields.
+A native science-fiction real-time strategy game for Apple Silicon Macs. Lead Commander Ada Voss through a four-chapter story campaign, or command one of three original factions in skirmishes across five battlefields.
 
 **[Download NULLFRONT for macOS](https://github.com/Slimetoad/nullfront/releases/latest)** · **[Visit the game website](https://slimetoad.github.io/nullfront/)** · **[Field manual](FIELD-MANUAL.md)**
 
-![NULLFRONT 0.6.0 gameplay: Concord armor and Bloom creatures fighting at the central relay](docs/assets/battle-0.6.jpg)
+![NULLFRONT 0.8 gameplay: Concord armor and Lumen constructs fighting across the Riverwood ford](docs/assets/battle-0.8.jpg)
+
+## A living front · 0.8
+
+**Three new battlefields:** Cascade Highlands, Riverwood Crossing and Emerald Basin. They add rivers and fords you can wade, waterfalls into the void, lakes, rolling hills and forests with guaranteed clear lanes between every base. The maps stay point-mirrored for fairness.
+
+**Living battles:** In Watch Battle, reinforcements keep arriving by faction: Concord orbital drops, Bloom eruptions and Lumen light pillars. Heroes land in slow motion. Wrecks burn, smoke and cool, and Frostglass snow, Ashfall embers and forest pollen drift through the air.
+
+**Movement and feel:** Characters blend idle, walk and run by their real ground speed, so their feet stay planted. They lean into turns and acceleration, rock back when braking, step when turning on the spot, flinch in the upper body when hit, and glance around when idle.
+
+**Visuals:** Trees, bushes, rocks and round props are rebuilt as smooth, organically shaped geometry. Cliff edges follow smoothed contours, terrain shading comes from the real surface, and water is cleaner. Every battlefield has its own lighting and atmosphere.
+
+**Interface:** A redesigned start screen with a live battle behind it, expanding faction cards, battlefield tiles and a Deploy button. At full zoom-out, units show team-coloured markers by class (infantry, heavy, air, hero) and structures show outlines.
 
 ## Unit identity and shading · 0.6.1
 
@@ -29,7 +41,7 @@ Press **F6** at the title screen to open Campaign. Choose an unlocked chapter, p
 ## Command the frontier
 
 - Three original factions: **The Concord**, **The Bloom**, and **The Lumen**.
-- Two maps: **Ashfall Mesa** and **Frostglass Rift**.
+- Five maps: **Ashfall Mesa**, **Frostglass Rift**, **Cascade Highlands**, **Riverwood Crossing**, and **Emerald Basin**.
 - Single-player skirmishes against AI with four difficulty levels.
 - **Rapid Deployment** starts with a base and strike force. Capture the central relay to strengthen your economy, or choose **Classic Build-up**.
 - Detailed art across the complete roster: workers, infantry, aircraft, heavy units, structures, and resources.
@@ -45,15 +57,15 @@ This is a downloadable Mac game. Browser play, Windows, Intel Mac, and online mu
 
 ## Install and play
 
-**Requirements:** Apple Silicon Mac (M-series), macOS 14 or newer. The download is **920 MiB** (964,963,199 bytes), and the app is approximately **1.25 GiB** (1,334,293,233 bytes). Allow at least **3 GB free** to download, extract, and install the archive. Performance varies by hardware; use the in-game Graphics setting if needed.
+**Requirements:** Apple Silicon Mac (M-series), macOS 14 or newer. The download is **920 MiB** (965,181,931 bytes), and the app is approximately **1.24 GiB** (1,334,752,455 bytes). Allow at least **3 GB free** to download, extract, and install the archive. Performance varies by hardware; use the in-game Graphics setting if needed.
 
-1. Open the [latest release](https://github.com/Slimetoad/nullfront/releases/latest) and download **NULLFRONT-0.6.1-macOS-arm64.zip**.
+1. Open the [latest release](https://github.com/Slimetoad/nullfront/releases/latest) and download **NULLFRONT-0.8.0-macOS-arm64.zip**.
 2. Extract the ZIP and move **NULLFRONT.app** into your Applications folder.
 3. Open NULLFRONT. Press **F6** for the campaign, or choose your faction and map and press **Enter** to launch a skirmish.
 
 This public preview is ad-hoc signed and has **not been notarized by Apple**. macOS may block its first launch. If you choose to run it, follow [Apple’s instructions for opening an app from an unknown developer](https://support.apple.com/en-us/102445): try opening the app, then use **System Settings → Privacy & Security → Open Anyway** for this app. No system-wide security change is needed.
 
-The release includes [SHA256SUMS-0.6.1.txt](SHA256SUMS-0.6.1.txt) to verify the download and **FIELD-MANUAL.md** for detailed controls. GitHub’s automatically generated “Source code” archives contain this website and documentation; download the named Mac ZIP to play.
+The release includes [SHA256SUMS-0.8.0.txt](SHA256SUMS-0.8.0.txt) to verify the download and **FIELD-MANUAL.md** for detailed controls. GitHub’s automatically generated “Source code” archives contain this website and documentation; download the named Mac ZIP to play.
 
 Having trouble? See the [installation and troubleshooting guide](INSTALL.md) for first-launch warnings, incompatible Macs, incomplete downloads, and checksum verification.
 

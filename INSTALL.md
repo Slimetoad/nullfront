@@ -1,15 +1,15 @@
 # Install NULLFRONT for Mac
 
-The current preview is **0.6.1**. It runs on **Apple Silicon Macs (M1 or newer) with macOS 14 or later**. Windows and Intel Macs are not supported by this download. Check **Apple menu → About This Mac** before downloading.
+The current preview is **0.8.0**. It runs on **Apple Silicon Macs (M1 or newer) with macOS 14 or later**. Windows and Intel Macs are not supported by this download. Check **Apple menu → About This Mac** before downloading.
 
 ## Download and open
 
-1. [Download the Mac game ZIP](https://github.com/Slimetoad/nullfront/releases/download/v0.6.1/NULLFRONT-0.6.1-macOS-arm64.zip). Wait for the download to finish; it is approximately 920 MiB.
-2. Double-click the ZIP. Open the extracted **NULLFRONT-0.6.1-macOS-arm64** folder.
+1. [Download the Mac game ZIP](https://github.com/Slimetoad/nullfront/releases/download/v0.8.0/NULLFRONT-0.8.0-macOS-arm64.zip). Wait for the download to finish; it is approximately 920 MiB.
+2. Double-click the ZIP. Open the extracted **NULLFRONT-0.8.0-macOS-arm64** folder.
 3. Drag **NULLFRONT.app** into **Applications**, then open it there. Allow at least **3 GB of free space** for the download, extraction, and installation.
 4. Press **F6** for Campaign, or choose a faction and press **Enter** for a skirmish. Some keyboards require **Fn + F6**.
 
-On GitHub, choose **NULLFRONT-0.6.1-macOS-arm64.zip** under Assets. The automatically generated **Source code** downloads contain the website and documentation, not the playable game.
+On GitHub, choose **NULLFRONT-0.8.0-macOS-arm64.zip** under Assets. The automatically generated **Source code** downloads contain the website and documentation, not the playable game.
 
 ## If macOS blocks the first launch
 
@@ -31,7 +31,7 @@ If the alert says the app **will damage your computer**, do not override it. If 
 
 ## Verify the download
 
-Expected filename: **NULLFRONT-0.6.1-macOS-arm64.zip**  
+Expected filename: **NULLFRONT-0.8.0-macOS-arm64.zip**  
 Exact size: **964,963,199 bytes**  
 SHA-256:
 
@@ -42,7 +42,7 @@ bfcb43052669f021857cfafd9aefefeea4cca5dde6efa9994837e72130b6b3ce
 Optional check in Terminal, if the file is in Downloads:
 
 ```sh
-shasum -a 256 ~/Downloads/NULLFRONT-0.6.1-macOS-arm64.zip
+shasum -a 256 ~/Downloads/NULLFRONT-0.8.0-macOS-arm64.zip
 ```
 
 If the result differs, do not launch that copy. Download again using the official link. If it matches and installation still fails, send the exact error and Mac details to the person who shared the game, or [report an issue](https://github.com/Slimetoad/nullfront/issues).

@@ -11,13 +11,13 @@
   const trailers = {
     main: {
       title: 'Main trailer',
-      source: 'assets/nullfront-main-trailer-30s.mp4',
-      poster: 'assets/nullfront-main-trailer-poster.webp',
+      source: 'assets/nullfront-0.8-trailer.mp4',
+      poster: 'assets/nullfront-0.8-trailer-poster.webp',
       captions: null,
-      kind: 'OFFICIAL TRAILER / 30-SECOND PREMIERE',
-      label: 'NULLFRONT main trailer — 30-second premiere',
-      disclosure: 'Main trailer · Story cinematics and native battle footage from NULLFRONT: Frontier Wars.',
-      description: 'Tony Studios presents NULLFRONT: Frontier Wars. Watch the 30-second main trailer, featuring the frontier, its three rival factions and native battle footage. The cinematic and gameplay trailers are also available above.'
+      kind: 'OFFICIAL TRAILER / VERSION 0.8',
+      label: 'NULLFRONT 0.8 trailer — in-engine footage',
+      disclosure: '0.8 trailer · In-engine battle footage from NULLFRONT 0.7 development builds, edited with titles and an original score.',
+      description: 'Tony Studios presents NULLFRONT: Frontier Wars. Watch the 60-second 0.8 trailer: in-engine battle footage from the 0.7 development builds across four battlefields, edited with titles and an original score. The cinematic and gameplay trailers are also available above.'
     },
     cinematic: {
       title: 'Cinematic trailer',
@@ -48,7 +48,7 @@
   let pendingSeek = null;
   let playRequest = 0;
   let signal = null;
-  const knownDurations = {main: 30};
+  const knownDurations = {main: 60};
   const format = n => `${String(Math.floor(n / 60)).padStart(2, '0')}:${String(Math.floor(n % 60)).padStart(2, '0')}`;
   const setText = (selector, text) => { const node = section.querySelector(selector); if (node) node.textContent = text; };
   const showDuration = seconds => {
